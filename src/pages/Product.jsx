@@ -34,6 +34,7 @@ const Title = styled.h1`
 
 const Desc = styled.p`
   margin: 20px 0px;
+  line-height: 28px;
 `;
 
 const Price = styled.span`
@@ -121,7 +122,7 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImageContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" alt="product image" />
         </ImageContainer>
         <InfoContainer>
           <Title>Jumpsuit</Title>
