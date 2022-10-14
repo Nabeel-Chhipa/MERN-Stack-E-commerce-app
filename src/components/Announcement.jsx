@@ -10,6 +10,7 @@ const Container = styled.div`
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
   padding: 10px 0px;
+  text-align: center
 `;
 
 const Announcement = () => {

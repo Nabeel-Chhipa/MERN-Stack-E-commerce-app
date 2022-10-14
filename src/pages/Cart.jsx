@@ -4,6 +4,7 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { mobile } from "../responsive";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -18,6 +19,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({flexDirection: 'column'})}
 `;
 const TopButton = styled.button`
   background: none;
@@ -30,8 +32,11 @@ const TopButton = styled.button`
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
+  ${mobile({ width: "70%", padding: "15px 10px" })}
 `;
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ margin: "10px 5px"})}
+`;
 const TopText = styled.span`
   text-decoration: underline;
   cursor: pointer;
@@ -40,10 +45,12 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({flexDirection: 'column'})}
 `;
 const Info = styled.div`
   flex: 3;
   margin-right: 20px;
+  ${mobile({margin: '20px 0px'})}
 `;
 const Summary = styled.div`
   flex: 1;
@@ -51,6 +58,7 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  ${mobile({margin: '20px 0px'})}
 `;
 const SummaryTitle = styled.h2`
   font-weight: 200;
@@ -59,8 +67,8 @@ const SummaryItem = styled.div`
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
-  font-weight: ${props => props.type === "total" && "600"};
-  font-size: ${props => props.type === "total" && "18px"};
+  font-weight: ${(props) => props.type === "total" && "600"};
+  font-size: ${(props) => props.type === "total" && "18px"};
 `;
 const SummaryItemText = styled.span``;
 const SummaryItemPrice = styled.span``;
@@ -94,6 +102,7 @@ const Image = styled.img`
   border: 2px dotted teal;
   border-radius: 50%;
   padding: 5px;
+  ${mobile({width: '100px', height: '90px'})}
 `;
 const Details = styled.div`
   display: flex;

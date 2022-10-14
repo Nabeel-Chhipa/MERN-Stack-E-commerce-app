@@ -1,6 +1,7 @@
 import { faPaperPlane } from "@fortawesome/fontawesome-free-solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -9,10 +10,12 @@ const Container = styled.div`
   align-items: center;
   height: 60vh;
   background-color: #fcf5f5;
+  ${mobile({height: '30vh', textAlign: 'center'})}
 `;
 const Title = styled.h1`
   font-size: 70px;
   margin-bottom: 20px;
+  ${mobile({fontSize: '45px'})}
 `;
 
 const Description = styled.div`
@@ -20,6 +23,7 @@ const Description = styled.div`
   font-size: 22px;
   line-height: 32px;
   font-weight: 300;
+  ${mobile({fontSize: '18px', lineHeight: '28px'})}
 `;
 
 const InputContainer = styled.div`
@@ -29,6 +33,7 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
+  ${mobile({width: '80%'})}
 `;
 
 const Input = styled.input`
